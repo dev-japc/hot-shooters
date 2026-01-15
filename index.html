@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Shooters LLC - Professional Trucking & Delivery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .service-card {
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .accent-text {
+            color: #ef4444; /* Red-500 */
+        }
+
+        .accent-bg {
+            background-color: #ef4444;
+        }
+
+        .accent-bg-hover:hover {
+            background-color: #dc2626;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold uppercase tracking-wider flex items-center gap-2">
+                <!-- <i class="fas fa-truck-moving accent-text"></i> -->
+                 <img src="PHOTO-2025-12-12-15-20-07 2-small-25.jpeg" alt="logo" style="width: 100px; height: 100px;"/>
+                <span>Hot Shooters <span class="accent-text">LLC</span></span>
+            </a>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 font-semibold">
+                <a href="#home" class="hover:text-red-600 transition">Home</a>
+                <a href="#services" class="hover:text-red-600 transition">Services</a>
+                <a href="#about" class="hover:text-red-600 transition">Why Us</a>
+                <a href="#contact" class="px-5 py-2 accent-bg text-white rounded hover:bg-red-700 transition">Contact</a>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4">
+            <a href="#home" class="block py-2 hover:text-red-600">Home</a>
+            <a href="#services" class="block py-2 hover:text-red-600">Services</a>
+            <a href="#about" class="block py-2 hover:text-red-600">Why Us</a>
+            <a href="#contact" class="block py-2 text-red-600 font-bold">Contact Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg h-screen flex items-center justify-center text-white px-6 pt-20">
+        <div class="text-center max-w-4xl">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                Reliable Delivery. <br>
+                <span class="text-red-500">Professional Service.</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 text-gray-200">
+                Your trusted partner for efficient logistics and transport solutions across the region.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#contact" class="px-8 py-4 accent-bg text-white font-bold rounded-lg text-lg hover:bg-red-700 transition shadow-lg">
+                    Get a Free Quote
+                </a>
+                <a href="#services" class="px-8 py-4 bg-white text-gray-900 font-bold rounded-lg text-lg hover:bg-gray-100 transition shadow-lg">
+                    View Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-red-500 font-bold uppercase tracking-widest text-sm">What We Do</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Premium Trucking Services</h2>
+                <div class="w-20 h-1 accent-bg mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-gray-50 p-8 rounded-xl border border-gray-100">
+                    <div class="w-14 h-14 accent-bg text-white rounded-lg flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Express Delivery</h3>
+                    <p class="text-gray-600">Fast, time-critical transportation for when your cargo needs to be there yesterday. We prioritize speed without compromising safety.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card bg-gray-50 p-8 rounded-xl border border-gray-100">
+                    <div class="w-14 h-14 accent-bg text-white rounded-lg flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Freight Logistics</h3>
+                    <p class="text-gray-600">Comprehensive logistics management for businesses of all sizes. We handle the complexities of transport so you don't have to.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card bg-gray-50 p-8 rounded-xl border border-gray-100">
+                    <div class="w-14 h-14 accent-bg text-white rounded-lg flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Local & Regional</h3>
+                    <p class="text-gray-600">Specialized knowledge of local routes ensuring efficient navigation and timely arrivals within our service areas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="about" class="py-20 bg-gray-900 text-white relative overflow-hidden">
+        <!-- Abstract Background Element -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gray-800 opacity-20 transform skew-x-12 translate-x-20"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Truck Driver" class="rounded-lg shadow-2xl border-4 border-gray-700">
+                </div>
+                <div class="md:w-1/2">
+                    <span class="text-red-500 font-bold uppercase tracking-widest text-sm">Why Choose Hot Shooters LLC</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6">Driven by Integrity, Delivered with Speed</h2>
+                    <p class="text-gray-400 mb-8 text-lg">
+                        We understand that in this industry, reliability is everything. Hot Shooters LLC was built on the promise of showing up on time, every time.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-red-500 mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-lg">Experienced Drivers</h4>
+                                <p class="text-sm text-gray-400">Our team is trained, licensed, and dedicated to road safety.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-red-500 mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-lg">Transparent Communication</h4>
+                                <p class="text-sm text-gray-400">No hidden fees. You'll always know where your shipment is.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-red-500 mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-lg">Customer-First Approach</h4>
+                                <p class="text-sm text-gray-400">We treat your cargo as if it were our own.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-red-500 font-bold uppercase tracking-widest text-sm">Get In Touch</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Contact Us Today</h2>
+                <div class="w-20 h-1 accent-bg mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-10 max-w-6xl mx-auto">
+                
+                <!-- Contact Info -->
+                <div class="lg:w-1/3 bg-white p-8 rounded-xl shadow-lg border-t-4 border-red-500">
+                    <h3 class="text-2xl font-bold mb-6">Direct Lines</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-500 mr-4 shrink-0">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 font-bold uppercase">Wesley Saunders</p>
+                                <a href="tel:3233096762" class="text-lg font-bold hover:text-red-600 transition">(323) 309-6762</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-500 mr-4 shrink-0">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 font-bold uppercase">Edward Saunders</p>
+                                <a href="tel:3233777481" class="text-lg font-bold hover:text-red-600 transition">(323) 377-7481</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-500 mr-4 shrink-0">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 font-bold uppercase">Email Us</p>
+                                <a href="mailto:hotshooters2293@gmail.com" class="text-lg font-bold hover:text-red-600 break-all transition">hotshooters2293@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:w-2/3 bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-2">Send a Message</h3>
+                    <p class="text-gray-500 mb-6">Fill out the form below to request a quote or ask a question.</p>
+                    
+                    <form id="contactForm" class="space-y-6" onsubmit="handleSubmit(event)">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-2" for="name">Your Name</label>
+                                <input class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-red-500 focus:bg-white focus:outline-none transition" id="name" type="text" placeholder="John Doe" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-2" for="email">Email Address</label>
+                                <input class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-red-500 focus:bg-white focus:outline-none transition" id="email" type="email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-bold mb-2" for="service">Service Interested In</label>
+                            <select class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-red-500 focus:bg-white focus:outline-none transition" id="service">
+                                <option>General Inquiry</option>
+                                <option>Express Delivery Quote</option>
+                                <option>Logistics Support</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-gray-700 font-bold mb-2" for="message">Message</label>
+                            <textarea class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-red-500 focus:bg-white focus:outline-none transition h-32" id="message" placeholder="Tell us about your delivery needs..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full md:w-auto px-8 py-4 accent-bg text-white font-bold rounded-lg hover:bg-red-700 transition shadow-lg flex items-center justify-center gap-2">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+
+                    <!-- Success Message (Hidden by default) -->
+                    <div id="successMessage" class="hidden mt-6 p-4 bg-green-100 text-green-700 rounded-lg border border-green-200 flex items-center">
+                        <i class="fas fa-check-circle text-2xl mr-3"></i>
+                        <div>
+                            <p class="font-bold">Message Sent!</p>
+                            <p class="text-sm">Thank you for contacting Hot Shooters LLC. We will get back to you shortly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-10 border-t border-gray-800">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-2xl font-bold text-white mb-4 uppercase tracking-wider">Hot Shooters LLC</h2>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="hover:text-red-500 transition"><i class="fab fa-facebook fa-lg"></i></a>
+                <a href="#" class="hover:text-red-500 transition"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="#" class="hover:text-red-500 transition"><i class="fab fa-linkedin fa-lg"></i></a>
+            </div>
+            <p>&copy; 2024 Hot Shooters LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Form Handling
+        function handleSubmit(event) {
+            event.preventDefault();
+            const form = document.getElementById('contactForm');
+            const successMsg = document.getElementById('successMessage');
+            const submitBtn = form.querySelector('button');
+
+            // Simulate sending
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-75');
+
+            setTimeout(() => {
+                form.reset();
+                form.classList.add('hidden');
+                successMsg.classList.remove('hidden');
+                // Scroll to message
+                successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 1500);
+        }
+    </script>
+</body>
+</html>
