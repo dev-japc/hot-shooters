@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Production Build
+dist/
+build/
+
+# site details froms client
+jorge-website-services.txt
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Environment Variables
+.env
+.env.local
+
+# Editor Configurations
+.vscode/
+.idea/
