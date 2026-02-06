@@ -6,7 +6,7 @@
     <title>Hot Shooters LLC - Professional Trucking & Delivery</title>
     <link href="./output.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="icon" href="../file-ico-2.ico" type="image/x-icon">   
+    <link rel="icon" href="./file-ico-2.ico" type="image/x-icon">   
 
 </head>
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
@@ -16,7 +16,7 @@
         <div class="container mx-auto pr-4 md:px-6 flex justify-between items-center">
             <a href="#" class="tex-sm md:text-xl font-bold uppercase tracking-wider flex items-center gap-2">
                 <!-- <i class="fas fa-truck-moving accent-text"></i> -->
-                 <img class="w-16 h-16 md:w-20 md:h-20" src="../file-copy.svg" alt="logo"/>
+                 <img class="w-16 h-16 md:w-20 md:h-20" src="./file-copy.svg" alt="logo"/>
                 <span class="text-gray-600 dark:text-gray-200 hover:text-(--secondary-orange)">Hot Shooters <span class="accent-text">LLC</span></span>
             </a>
             
@@ -142,7 +142,7 @@
         <div class="container mx-auto px-6 relative z-10">
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
-                    <img src="../file.svg" alt="Truck Driver" class="why-img rounded-lg shadow-2xl border-4 border-gray-700">
+                    <img src="./file.svg" alt="Truck Driver" class="why-img rounded-lg shadow-2xl border-4 border-gray-700">
                 </div>
                 <div class="md:w-1/2">
                     <span class="text-red-500 font-bold uppercase tracking-widest text-sm">Why Choose Hot Shooters LLC</span>
@@ -291,37 +291,6 @@
         </div>
     </footer>
 
-    <script src="../scripts.js"></script>
-    <script>
-        // Mobile Menu Toggle
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        // Form Handling
-        function handleSubmit(event) {
-            event.preventDefault();
-            const form = document.getElementById('contactForm');
-            const successMsg = document.getElementById('successMessage');
-            const submitBtn = form.querySelector('button');
-
-            // Simulate sending
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            submitBtn.disabled = true;
-            submitBtn.classList.add('opacity-75');
-
-            setTimeout(() => {
-                form.reset();
-                form.classList.add('hidden');
-                successMsg.classList.remove('hidden');
-                successMsg.classList.add('flex');
-                // Scroll to message
-                successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }, 1500);
-        }
-    </script>
+    <script src="./scripts.js"></script>
 </body>
 </html>

@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         setTheme('light');
     }
-    
+
     // Toggle button listener
     themeToggleButtons.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -81,3 +81,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Form Handling
+function handleSubmit(event) {
+    event.preventDefault();
+    const form = document.getElementById('contactForm');
+    const successMsg = document.getElementById('successMessage');
+    const submitBtn = form.querySelector('button');
+
+    // Simulate sending
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    submitBtn.disabled = true;
+    submitBtn.classList.add('opacity-75');
+
+    setTimeout(() => {
+        form.reset();
+        form.classList.add('hidden');
+        successMsg.classList.remove('hidden');
+        successMsg.classList.add('flex');
+        // Scroll to message
+        successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 1500);
+}
