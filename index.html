@@ -6,23 +6,26 @@
     <title>Hot Shooters LLC - Professional Trucking & Delivery</title>
     <link href="./output.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="icon" href="./file.ico" type="image/x-icon">   
+    <link rel="icon" href="../file-ico-2.ico" type="image/x-icon">   
 
 </head>
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
 
     <!-- Navigation -->
     <nav class="bg-white dark:bg-gray-800 shadow-md fixed w-full z-50 transition-colors duration-300">
-        <div class="container mx-auto px-4 md:px-6 flex justify-between items-center">
+        <div class="container mx-auto pr-4 md:px-6 flex justify-between items-center">
             <a href="#" class="tex-sm md:text-xl font-bold uppercase tracking-wider flex items-center gap-2">
                 <!-- <i class="fas fa-truck-moving accent-text"></i> -->
-                 <img class="w-16 h-16 md:w-20 md:h-20" src="./file-copy.svg" alt="logo"/>
+                 <img class="w-16 h-16 md:w-20 md:h-20" src="../file-copy.svg" alt="logo"/>
                 <span class="text-gray-600 dark:text-gray-200 hover:text-(--secondary-orange)">Hot Shooters <span class="accent-text">LLC</span></span>
             </a>
             
             <!-- Mobile Menu Button -->
+             <button  class="theme-toggle-btn md:hidden p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition focus:outline-none" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon text-gray-600 dark:text-gray-300"></i>
+            </button>
             <button id="mobile-menu-btn" class="md:hidden focus:outline-none">
-                <i class="fas fa-bars text-2xl"></i>
+                <i class="fas fa-bars text-2xl text-gray-600 dark:text-gray-300"></i>
             </button>
 
             <!-- Desktop Menu -->
@@ -30,7 +33,7 @@
                 <a href="#home" class="py-2 dark:text-gray-200 hover:text-(--secondary-orange) transition">Home</a>
                 <a href="#services" class="py-2 dark:text-gray-200 hover:text-(--secondary-orange) transition">Services</a>
                 <a href="#about" class="py-2 dark:text-gray-200 hover:text-(--secondary-orange) transition">Why Us</a>
-                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition focus:outline-none" aria-label="Toggle Dark Mode">
+                <button id="theme-toggle" class="theme-toggle-btn p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition focus:outline-none" aria-label="Toggle Dark Mode">
                     <i class="fas fa-moon text-gray-600 dark:text-gray-300"></i>
                 </button>
                 <a href="#contact" class="px-5 py-2 accent-bg text-white rounded hover:bg-red-700 transition">Contact</a>
@@ -42,7 +45,7 @@
             <a href="#home" class="block py-2 dark:text-gray-200 hover:text-(--secondary-orange)">Home</a>
             <a href="#services" class="block py-2 dark:text-gray-200 hover:text-(--secondary-orange)">Services</a>
             <a href="#about" class="block py-2 dark:text-gray-200 hover:text-(--secondary-orange)">Why Us</a>
-            <a href="#contact" class="block py-2 text-red-600 font-bold">Contact Now</a>
+            <a href="#contact" class="block py-2 text-(--secondary-orange) font-bold">Contact Now</a>
         </div>
     </nav>
 
@@ -139,7 +142,7 @@
         <div class="container mx-auto px-6 relative z-10">
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
-                    <img src="./file.svg" alt="Truck Driver" class="why-img rounded-lg shadow-2xl border-4 border-gray-700">
+                    <img src="../file.svg" alt="Truck Driver" class="why-img rounded-lg shadow-2xl border-4 border-gray-700">
                 </div>
                 <div class="md:w-1/2">
                     <span class="text-red-500 font-bold uppercase tracking-widest text-sm">Why Choose Hot Shooters LLC</span>
@@ -263,7 +266,7 @@
                     </form>
 
                     <!-- Success Message (Hidden by default) -->
-                    <div id="successMessage" class="hidden mt-6 p-4 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded-lg border border-green-200 dark:border-green-800 flex items-center">
+                    <div id="successMessage" class="hidden mt-6 p-4 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded-lg border border-green-200 dark:border-green-800 items-center">
                         <i class="fas fa-check-circle text-2xl mr-3"></i>
                         <div>
                             <p class="font-bold">Message Sent!</p>
@@ -288,7 +291,7 @@
         </div>
     </footer>
 
-    <script src="./scripts.js"></script>
+    <script src="../scripts.js"></script>
     <script>
         // Mobile Menu Toggle
         const btn = document.getElementById('mobile-menu-btn');
@@ -314,6 +317,7 @@
                 form.reset();
                 form.classList.add('hidden');
                 successMsg.classList.remove('hidden');
+                successMsg.classList.add('flex');
                 // Scroll to message
                 successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }, 1500);

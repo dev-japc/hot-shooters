@@ -72,26 +72,12 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         setTheme('light');
     }
-
+    
     // Toggle button listener
     themeToggleButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-        // Tu lógica para cambiar el tema aquí
-        document.documentElement.classList.toggle('dark');
-        
-        // Guardar en localStorage
-        if (document.documentElement.classList.contains('dark')) {
-            localStorage.setItem('theme', 'dark');
-        } else {
-            localStorage.setItem('theme', 'light');
-        }
+        btn.addEventListener('click', () => {
+            const isDark = html.classList.contains('dark');
+            setTheme(isDark ? 'light' : 'dark');
+        });
     });
-});
-    // const btn = document.getElementById('theme-toggle');
-    // if (btn) {
-    //     btn.addEventListener('click', () => {
-    //         const isDark = html.classList.contains('dark');
-    //         setTheme(isDark ? 'light' : 'dark');
-    //     });
-    // }
 });
