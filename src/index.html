@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hot Shooters LLC - Professional Trucking & Delivery</title>
     <link href="./output.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="icon" href="../file-ico-2.ico" type="image/x-icon">   
+    <link rel="icon" href="../images/file-ico-2.ico" type="image/x-icon">
 
 </head>
+
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
 
     <!-- Navigation -->
@@ -16,13 +18,16 @@
         <div class="container mx-auto pr-4 md:px-6 flex justify-between items-center">
             <a href="#" class="tex-sm md:text-xl font-bold uppercase tracking-wider flex items-center gap-2">
                 <!-- <i class="fas fa-truck-moving accent-text"></i> -->
-                 <img class="w-16 h-16 md:w-20 md:h-20" src="../file-copy.svg" alt="logo"/>
-                <span class="text-gray-600 dark:text-gray-200 hover:text-(--secondary-orange)">Hot Shooters <span class="accent-text">LLC</span></span>
+                <img class="w-16 h-16 md:w-20 md:h-20" src="../images/file-copy.svg" alt="logo" />
+                <span class="text-gray-600 dark:text-gray-200 hover:text-(--secondary-orange)">Hot Shooters <span
+                        class="accent-text">LLC</span></span>
             </a>
-            
+
             <!-- Mobile Menu and Theme Toggle -->
             <div class="md:hidden flex items-center gap-4">
-                <button class="theme-toggle-btn p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition focus:outline-none" aria-label="Toggle Dark Mode">
+                <button
+                    class="theme-toggle-btn p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition focus:outline-none"
+                    aria-label="Toggle Dark Mode">
                     <i class="fas fa-moon text-gray-600 dark:text-gray-300"></i>
                 </button>
                 <button id="mobile-menu-btn" class="focus:outline-none">
@@ -32,24 +37,43 @@
 
             <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8 font-semibold">
-                <a href="#home" class="py-2 text-gray-600 dark:text-gray-200 hover:text-(--secondary-orange) transition">Home</a>
-                <a href="#services" class="py-2 text-gray-600 dark:text-gray-200 hover:text-(--secondary-orange) transition">Services</a>
-                <a href="#about" class="py-2 text-gray-600 dark:text-gray-200 hover:text-(--secondary-orange) transition">Why Us</a>
-                <button id="theme-toggle" class="theme-toggle-btn p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition focus:outline-none" aria-label="Toggle Dark Mode">
+                <a href="#home"
+                    class="py-2 text-gray-600 dark:text-gray-200 hover:text-(--secondary-orange) transition">Home</a>
+                <a href="#services"
+                    class="py-2 text-gray-600 dark:text-gray-200 hover:text-(--secondary-orange) transition">Services</a>
+                <a href="#about"
+                    class="py-2 text-gray-600 dark:text-gray-200 hover:text-(--secondary-orange) transition">Why Us</a>
+                <a href="#faqs"
+                    class="py-2 text-gray-600 dark:text-gray-200 hover:text-(--secondary-orange) transition">FAQs</a>
+                <button id="theme-toggle"
+                    class="theme-toggle-btn p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition focus:outline-none"
+                    aria-label="Toggle Dark Mode">
                     <i class="fas fa-moon text-gray-600 dark:text-gray-300"></i>
                 </button>
-                <button onclick="window.location.href='#contact'" class="px-5 py-2 bg-(--secondary-orange) hover:bg-orange-500 text-(--hs-white) rounded transition cursor-pointer">
+                <button onclick="window.location.href='#contact'"
+                    class="px-5 py-2 bg-(--secondary-orange) hover:bg-orange-500 text-(--hs-white) rounded transition cursor-pointer">
                     Contact
                 </button>
             </div>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 border-t dark:border-gray-700 p-4">
-            <a href="#home" class="block py-2 dark:text-gray-200 hover:text-(--secondary-orange)">Home</a>
-            <a href="#services" class="block py-2 dark:text-gray-200 hover:text-(--secondary-orange)">Services</a>
-            <a href="#about" class="block py-2 dark:text-gray-200 hover:text-(--secondary-orange)">Why Us</a>
-            <a href="#contact" class="block py-2 text-(--secondary-orange) font-bold">Contact Now</a>
+        <div id="mobile-menu"
+            class="md:hidden overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0 bg-white/95 dark:bg-gray-800/95 backdrop-blur-md border-t dark:border-gray-700 w-full shadow-xl">
+            <div class="p-4 flex flex-col gap-2">
+                <a href="#home"
+                    class="block py-3 px-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 dark:text-gray-200 hover:text-(--secondary-orange) transition-colors">Home</a>
+                <a href="#services"
+                    class="block py-3 px-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 dark:text-gray-200 hover:text-(--secondary-orange) transition-colors">Services</a>
+                <a href="#about"
+                    class="block py-3 px-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 dark:text-gray-200 hover:text-(--secondary-orange) transition-colors">Why
+                    Us</a>
+                <a href="#faqs"
+                    class="block py-3 px-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 dark:text-gray-200 hover:text-(--secondary-orange) transition-colors">FAQs</a>
+                <a href="#contact"
+                    class="block py-3 px-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 text-(--secondary-orange) font-bold transition-colors">Contact
+                    Now</a>
+            </div>
         </div>
     </nav>
 
@@ -64,10 +88,12 @@
                 Your trusted partner for efficient logistics and transport solutions.
             </p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
-                <button onclick="window.location.href='#contact'" class="px-8 py-4 bg-(--secondary-orange) text-white font-bold rounded-lg text-lg hover:bg-orange-500 transition shadow-lg">
+                <button onclick="window.location.href='#contact'"
+                    class="px-8 py-4 bg-(--secondary-orange) text-white font-bold rounded-lg text-lg hover:bg-orange-500 transition shadow-lg">
                     Get a Free Quote
                 </button>
-                <button onclick="window.location.href='#services'" class="px-8 py-4 bg-white text-gray-900 font-bold rounded-lg text-lg hover:bg-gray-200 transition shadow-lg">
+                <button onclick="window.location.href='#services'"
+                    class="px-8 py-4 bg-white text-gray-900 font-bold rounded-lg text-lg hover:bg-gray-200 transition shadow-lg">
                     View Services
                 </button>
             </div>
@@ -79,60 +105,122 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-8 md:mb-16">
                 <span class="text-(--secondary-orange) font-bold uppercase tracking-widest text-sm">What We Do</span>
-                <h2 class="text-3xl md:text-4xl font-bold mt-2 text-gray-600 dark:text-gray-100">Premium Trucking Services</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 text-gray-600 dark:text-gray-100">Premium Trucking
+                    Services</h2>
                 <div class="w-20 h-1 accent-bg mx-auto mt-4 rounded"></div>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <div class="service-card bg-gray-50 dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700">
-                    <div class="w-14 h-14 accent-bg text-white rounded-lg flex items-center justify-center text-2xl mb-6">
+                <div
+                    class="service-card bg-gray-50 dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700">
+                    <div
+                        class="w-14 h-14 accent-bg text-white rounded-lg flex items-center justify-center text-2xl mb-6">
                         <i class="fas fa-shipping-fast"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-600 dark:text-gray-200">Ground Services</h3>
-                    <p class="text-gray-600 dark:text-gray-400">
-                        <span class="font-bold text-gray-500 dark:text-gray-300">Expedited Ground Services for Time-Critical Shipments.</span>
+                    <h3 class="text-xl font-bold mb-3 text-gray-600 dark:text-gray-100">Ground Services</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        <span class="font-bold text-gray-700 dark:text-gray-300">When tomorrow is too late, we deliver
+                            today.</span>
                         <br>
-                        Our dedicated fleet of vehicles is running 24/7 to ensure your package gets to you safely, 
-                        securely, and on time. We specialize in urgent transport, guaranteeing reliability no matter the time of day.</p>
+                        Our dedicated fleet operates 24/7/365 to ensure your time-critical shipments arrive safely. We
+                        provide exclusive-use vehicles for direct, non-stop delivery.
+                    </p>
+
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle mt-1"></i>
+                            <span><strong>Nationwide Direct Drive:</strong> Point-to-point delivery without
+                                transfers.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle mt-1"></i>
+                            <span><strong>24/7 Availability:</strong> Dispatch ready at any hour, day or night.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle mt-1"></i>
+                            <span><strong>Live Tracking:</strong> Real-time updates from pickup to delivery.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle mt-1"></i>
+                            <span><strong>Secure Handling:</strong> Dedicated vehicles mean no mixed cargo.</span>
+                        </li>
+                    </ul>
                 </div>
 
                 <!-- Service 2 -->
-                <div class="service-card bg-gray-50 dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700">
-                    <div class="w-14 h-14 accent-bg text-white rounded-lg flex items-center justify-center text-2xl mb-6">
+                <div
+                    class="service-card bg-gray-50 dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700">
+                    <div
+                        class="w-14 h-14 accent-bg text-white rounded-lg flex items-center justify-center text-2xl mb-6">
                         <i class="fas fa-boxes"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-600 dark:text-gray-200">LTL Ground Transit</h3>
-                    <p class="text-gray-600 dark:text-gray-400">
-                        <span class="font-bold text-gray-500 dark:text-gray-300">
+                    <h3 class="text-xl font-bold mb-3 text-gray-600 dark:text-gray-100">LTL Ground Transit</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        <span class="font-bold text-gray-700 dark:text-gray-300">
                             Efficient Less-Than-Truckload Solutions.
                         </span>
                         <br>
-                        Our LTL ground transit services offer the flexibility to move smaller loads without the cost of a full truck. We optimize routes to ensure your cargo is transported efficiently, safely, and cost-effectively.
+                        Our LTL services provide the flexibility you need for smaller shipments, optimizing routes to
+                        ensure your cargo is transported efficiently.
                     </p>
+
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle mt-1"></i>
+                            <span><strong>Cost-Effective:</strong> Pay only for the space your cargo occupies.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle mt-1"></i>
+                            <span><strong>Route Optimization:</strong> Advanced routing for faster transit times.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle mt-1"></i>
+                            <span><strong>Flexible Capacity:</strong> Perfect for shipments that don't need a full
+                                truck.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle mt-1"></i>
+                            <span><strong>Safe Transport:</strong> Secure handling mixed with efficiency.</span>
+                        </li>
+                    </ul>
                 </div>
 
                 <!-- Service 3 -->
-                <div class="service-card bg-gray-50 dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700">
-                    <div class="w-14 h-14 accent-bg text-white rounded-lg flex items-center justify-center text-2xl mb-6">
+                <div
+                    class="service-card bg-gray-50 dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700">
+                    <div
+                        class="w-14 h-14 accent-bg text-white rounded-lg flex items-center justify-center text-2xl mb-6">
                         <i class="fas fa-route"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-600 dark:text-gray-200">White Glove Services</h3>
-                    <p class="text-gray-600 dark:text-gray-400"><span class="font-bold text-gray-500 dark:text-gray-300">Premium Service for Delicate and High-Value Cargo.</span>
+                    <h3 class="text-xl font-bold mb-3 text-gray-600 dark:text-gray-100">White Glove Services</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4"><span
+                            class="font-bold text-gray-700 dark:text-gray-300">Premium Service for Delicate and
+                            High-Value Cargo.</span>
                         <br>
-                       We provide meticulous handling, 
-                        from careful transport to on-site setup, 
-                        ensuring your shipment arrives pristine, on time, and fully ready for immediate use. 
-                        <br>
-                        <br>
-                        White Glove Services Include:
-                        <ul class="pl-6">
-                            <li class="text-gray-600 dark:text-gray-400 text-sm list-disc" >Technical Services( Installs and Assembly)</li>
-                            <li class="text-gray-600 dark:text-gray-400 text-sm list-disc">Unpacking & Uncrating</li>
-                            <li class="text-gray-600 dark:text-gray-400 text-sm list-disc">Debris Removal</li>
-                            <li class="text-gray-600 dark:text-gray-400 text-sm list-disc">Multi Person/ Team Deliveries</li>
-                        </ul>
+                        We go beyond the dock with meticulous inside delivery and setup, ensuring your shipment arrives
+                        pristine.
                     </p>
+
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle mt-1"></i>
+                            <span><strong>Technical Installation:</strong> Professional assembly and setup
+                                on-site.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle mt-1"></i>
+                            <span><strong>Debris Removal:</strong> We unpack and remove all packaging materials.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle mt-1"></i>
+                            <span><strong>Team Service:</strong> Multi-person crews for heavy or awkward items.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle mt-1"></i>
+                            <span><strong>Precision Handling:</strong> Specialized care for high-value assets.</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -141,19 +229,22 @@
     <!-- Why Choose Us -->
     <section id="about" class="py-10 md:py-20 bg-gray-900 text-(--hs-white) relative overflow-hidden">
         <!-- Abstract Background Element -->
-        <div class="absolute top-0 right-0 w-1/2 h-full bg-gray-800 opacity-20 transform skew-x-12 translate-x-20"></div>
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gray-800 opacity-20 transform skew-x-12 translate-x-20">
+        </div>
 
         <div class="container mx-auto px-6 relative z-10">
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
-                    <img src="../file.svg" alt="Truck Driver" class="why-img rounded-lg shadow-2xl border-4 border-gray-700">
+                    <img src="../images/file.svg" alt="Truck Driver"
+                        class="why-img rounded-lg shadow-2xl border-4 border-gray-700">
                 </div>
                 <div class="md:w-1/2">
-                    <span class="text-(--secondary-orange) font-bold uppercase tracking-widest text-sm">Why Choose Hot Shooters LLC</span>
+                    <span class="text-(--secondary-orange) font-bold uppercase tracking-widest text-sm">Why Choose Hot
+                        Shooters LLC</span>
                     <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6">Driven by Integrity, Delivered with Speed</h2>
                     <p class="text-gray-400 mb-8 text-lg">
-                        We understand that in this industry, reliability is everything. 
-                        <br><strong class="text-(--secondary-orange)">Hot Shooters LLC</strong> 
+                        We understand that in this industry, reliability is everything.
+                        <br><strong class="text-(--secondary-orange)">Hot Shooters LLC</strong>
                         was built on the promise of showing up on time, every time.
                         Reliable delivery is guaranteed to you.<br>
                         Professionalism & Integrity in the services we provide is our standard.
@@ -164,14 +255,16 @@
                             <i class="fas fa-check-circle text-(--secondary-orange) mt-1 mr-4"></i>
                             <div>
                                 <h4 class="font-bold text-lg">Experienced Drivers</h4>
-                                <p class="text-sm text-gray-400">Our professional team is trained, licensed, and dedicated to road safety.</p>
+                                <p class="text-sm text-gray-400">Our professional team is trained, licensed, and
+                                    dedicated to road safety.</p>
                             </div>
                         </div>
                         <div class="flex items-start">
                             <i class="fas fa-check-circle text-(--secondary-orange) mt-1 mr-4"></i>
                             <div>
                                 <h4 class="font-bold text-lg">Transparent Communication</h4>
-                                <p class="text-sm text-gray-400">No hidden fees. You'll always know where your shipment is.</p>
+                                <p class="text-sm text-gray-400">No hidden fees. You'll always know where your shipment
+                                    is.</p>
                             </div>
                         </div>
                         <div class="flex items-start">
@@ -188,48 +281,61 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-10 md:py-20 text-gray-600 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <section id="contact"
+        class="py-10 md:py-20 text-gray-600 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <span class="text-(--secondary-orange) font-bold uppercase tracking-widest text-sm">Get In Touch</span>
-                <h2 class="text-3xl md:text-4xl font-bold mt-2 dark:text-(--hs-white)">Contact Us Today</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 text-gray-600 dark:text-(--hs-white)">Contact Us Today
+                </h2>
                 <div class="w-20 h-1 accent-bg mx-auto mt-4 rounded"></div>
             </div>
 
             <div class="flex flex-col lg:flex-row gap-10 max-w-6xl mx-auto">
-                
+
                 <!-- Contact Info -->
-                <div class="lg:w-1/3 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border-t-4 border-(--secondary-orange)">
-                    <h3 class="text-2xl font-bold mb-6 dark:text-(--hs-white)">Direct Lines</h3>
-                    
+                <div
+                    class="lg:w-1/3 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border-t-4 border-(--secondary-orange)">
+                    <h3 class="text-2xl font-bold text-gray-600 mb-6 dark:text-(--hs-white)">Direct Lines</h3>
+
                     <div class="space-y-6">
                         <div class="flex items-start">
-                            <div class="w-10 h-10 rounded-full bg-red-100 dark:bg-gray-700 flex items-center justify-center text-(--secondary-orange) mr-4 shrink-0">
+                            <div
+                                class="w-10 h-10 rounded-full bg-red-100 dark:bg-gray-700 flex items-center justify-center text-(--secondary-orange) mr-4 shrink-0">
                                 <i class="fas fa-user"></i>
                             </div>
                             <div>
-                                <p class="text-sm text-gray-500 dark:text-gray-400 font-bold uppercase">Wesley Saunders</p>
-                                <a href="tel:3233096762" class="text-lg font-bold hover:text-(--secondary-orange) transition dark:text-(--hs-white)">(323) 309-6762</a>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 font-bold uppercase">Wesley Saunders
+                                </p>
+                                <a href="tel:3233096762"
+                                    class="text-lg font-bold hover:text-(--secondary-orange) transition text-gray-600 dark:text-(--hs-white)">(323)
+                                    309-6762</a>
                             </div>
                         </div>
 
                         <div class="flex items-start">
-                            <div class="w-10 h-10 rounded-full bg-red-100 dark:bg-gray-700 flex items-center justify-center text-(--secondary-orange) mr-4 shrink-0">
+                            <div
+                                class="w-10 h-10 rounded-full bg-red-100 dark:bg-gray-700 flex items-center justify-center text-(--secondary-orange) mr-4 shrink-0">
                                 <i class="fas fa-user"></i>
                             </div>
                             <div>
-                                <p class="text-sm text-gray-500 dark:text-gray-400 font-bold uppercase">Edward Saunders</p>
-                                <a href="tel:3233777481" class="text-lg font-bold hover:text-(--secondary-orange) transition dark:text-(--hs-white)">(323) 377-7481</a>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 font-bold uppercase">Edward Saunders
+                                </p>
+                                <a href="tel:3233777481"
+                                    class="text-lg font-bold hover:text-(--secondary-orange) transition text-gray-600 dark:text-(--hs-white)">(323)
+                                    377-7481</a>
                             </div>
                         </div>
 
                         <div class="flex items-start">
-                            <div class="w-10 h-10 rounded-full bg-red-100 dark:bg-gray-700 flex items-center justify-center text-(--secondary-orange) mr-4 shrink-0">
+                            <div
+                                class="w-10 h-10 rounded-full bg-red-100 dark:bg-gray-700 flex items-center justify-center text-(--secondary-orange) mr-4 shrink-0">
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div>
                                 <p class="text-sm text-gray-500 dark:text-gray-400 font-bold uppercase">Email Us</p>
-                                <a href="mailto:hotshooters2293@gmail.com" class="text-lg font-bold hover:text-(--secondary-orange) break-all transition dark:text-(--hs-white)">hotshooters2293@gmail.com</a>
+                                <a href="mailto:hotshooters2293@gmail.com"
+                                    class="text-lg font-bold hover:text-(--secondary-orange) break-all transition text-gray-600 dark:text-(--hs-white)">hotshooters2293@gmail.com</a>
                             </div>
                         </div>
                     </div>
@@ -238,49 +344,69 @@
                 <!-- Contact Form -->
                 <div class="lg:w-2/3 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg transition-colors duration-300">
                     <h3 class="text-2xl font-bold mb-2 dark:text-(--hs-white)">Send a Message</h3>
-                    <p class="text-gray-500 dark:text-gray-400 mb-6">Fill out the form below to request a quote or ask a question.</p>
-                    
+                    <p class="text-gray-500 dark:text-gray-400 mb-6">Fill out the form below to request a quote or ask a
+                        question.</p>
+
                     <form id="contactForm" class="space-y-6" onsubmit="handleSubmit(event)">
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
-                                <label class="block text-gray-700 dark:text-(--hs-white) font-bold mb-2" for="name">Your Name</label>
-                                <input class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-700 dark:text-white border border-gray-200 dark:border-gray-600 focus:border-(--secondary-orange) dark:focus:border-(--secondary-orange) focus:bg-white dark:focus:bg-gray-600 focus:outline-none transition" id="name" type="text" placeholder="John Doe" required>
+                                <label class="block text-gray-600 dark:text-(--hs-white) font-bold mb-2" for="name">Your
+                                    Name</label>
+                                <input
+                                    class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-700 dark:text-white border border-gray-200 dark:border-gray-600 focus:border-(--secondary-orange) dark:focus:border-(--secondary-orange) focus:bg-white dark:focus:bg-gray-600 focus:outline-none transition"
+                                    id="name" type="text" placeholder="John Doe" required>
                             </div>
                             <div>
-                                <label class="block text-gray-700 dark:text-(--hs-white) font-bold mb-2" for="email">Email Address</label>
-                                <input class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-700 dark:text-white border border-gray-200 dark:border-gray-600 focus:border-(--secondary-orange) dark:focus:border-(--secondary-orange) focus:bg-white dark:focus:bg-gray-600 focus:outline-none transition" id="email" type="email" placeholder="john@example.com" required>
+                                <label class="block text-gray-600 dark:text-(--hs-white) font-bold mb-2"
+                                    for="email">Email Address</label>
+                                <input
+                                    class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-700 dark:text-white border border-gray-200 dark:border-gray-600 focus:border-(--secondary-orange) dark:focus:border-(--secondary-orange) focus:bg-white dark:focus:bg-gray-600 focus:outline-none transition"
+                                    id="email" type="email" placeholder="john@example.com" required>
                             </div>
                         </div>
-                        
+
                         <div>
-                            <label class="block text-gray-700 dark:text-(--hs-white) font-bold mb-2" for="service">Service Interested In</label>
-                            <select class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-700 dark:text-(--hs-white) border
-                             border-gray-200 dark:border-gray-600 focus:border-(--secondary-orange) dark:focus:border-(--secondary-orange)
-                              focus:bg-white dark:focus:bg-gray-600 focus:outline-none transition" id="service">
-                                <option class="dark:text-(--hs-white)">General Inquiry</option>
-                                <option class="dark:text-(--hs-white)">Express Delivery Quote</option>
-                                <option class="dark:text-(--hs-white)">Logistics Support</option>
-                                <option class="dark:text-(--hs-white)">Other</option>
-                            </select>
+                            <label class="block text-gray-600 dark:text-(--hs-white) font-bold mb-2"
+                                for="service">Service Interested In</label>
+                            <div class="relative">
+                                <select
+                                    class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-700 dark:text-(--hs-white) border border-gray-200 dark:border-gray-600 focus:border-(--secondary-orange) dark:focus:border-(--secondary-orange) focus:bg-white dark:focus:bg-gray-600 focus:outline-none transition appearance-none cursor-pointer"
+                                    id="service">
+                                    <option class="text-gray-500 dark:text-(--hs-white)">General Inquiry</option>
+                                    <option class="text-gray-500 dark:text-(--hs-white)">Express Delivery Quote</option>
+                                    <option class="text-gray-500 dark:text-(--hs-white)">Logistics Support</option>
+                                    <option class="text-gray-500 dark:text-(--hs-white)">Other</option>
+                                </select>
+                                <div
+                                    class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-gray-500 dark:text-gray-400">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
                         </div>
 
                         <div>
-                            <label class="block text-gray-700 dark:text-(--hs-white) font-bold mb-2" for="message">Message</label>
-                            <textarea class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-700 dark:text-white border border-gray-200 dark:border-gray-600 focus:border-(--secondary-orange) dark:focus:border-(--secondary-orange) focus:bg-white dark:focus:bg-gray-600 focus:outline-none transition h-32" id="message" placeholder="Tell us about your delivery needs..." required></textarea>
+                            <label class="block text-gray-700 dark:text-(--hs-white) font-bold mb-2"
+                                for="message">Message</label>
+                            <textarea
+                                class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-700 dark:text-white border border-gray-200 dark:border-gray-600 focus:border-(--secondary-orange) dark:focus:border-(--secondary-orange) focus:bg-white dark:focus:bg-gray-600 focus:outline-none transition h-32"
+                                id="message" placeholder="Tell us about your delivery needs..." required></textarea>
                         </div>
 
-                        <button type="submit" class="w-full md:w-auto px-8 py-4 bg-(--secondary-orange) text-white font-bold rounded-lg hover:bg-orange-500 transition shadow-lg flex items-center justify-center gap-2">
+                        <button type="submit"
+                            class="w-full md:w-auto px-8 py-4 bg-(--secondary-orange) text-white font-bold rounded-lg hover:bg-orange-500 transition shadow-lg flex items-center justify-center gap-2">
                             <span>Send Message</span>
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>
 
                     <!-- Success Message (Hidden by default) -->
-                    <div id="successMessage" class="hidden mt-6 p-4 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded-lg border border-green-200 dark:border-green-800 items-center">
+                    <div id="successMessage"
+                        class="hidden mt-6 p-4 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded-lg border border-green-200 dark:border-green-800 items-center">
                         <i class="fas fa-check-circle text-2xl mr-3"></i>
                         <div>
                             <p class="font-bold">Message Sent!</p>
-                            <p class="text-sm">Thank you for contacting Hot Shooters LLC. We will get back to you shortly.</p>
+                            <p class="text-sm">Thank you for contacting Hot Shooters LLC. We will get back to you
+                                shortly.</p>
                         </div>
                     </div>
                 </div>
@@ -291,38 +417,48 @@
     <section id="faqs" class="py-10 md:py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mt-2 text-gray-600 dark:text-(--hs-white)">Frequently Asked Questions</h2>
-                <span class="text-(--secondary-orange) font-bold uppercase tracking-widest text-sm">Here are some common questions about our services</span>
+                <span class="text-(--secondary-orange) font-bold uppercase tracking-widest text-sm">Here are some common
+                    questions about our services</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 text-gray-600 dark:text-(--hs-white)">Frequently Asked
+                    Questions</h2>
                 <div class="w-20 h-1 accent-bg mx-auto mt-4 rounded"></div>
             </div>
             <div class="container mx-auto md:w-1/2 space-y-4">
                 <div class="bg-(--hs-white) dark:bg-gray-700 p-4 rounded-lg">
                     <h3 class="font-bold text-gray-600 dark:text-(--hs-white)">What areas do you serve?</h3>
-                    <p class="text-gray-500 dark:text-gray-400">We serve the entire state of California, with a focus on the Los Angeles, Orange, and San Diego counties.</p>
+                    <p class="text-gray-500 dark:text-gray-400">We serve the entire state of California, with a focus on
+                        the Los Angeles, Orange, and San Diego counties.</p>
                 </div>
                 <div class="bg-(--hs-white) dark:bg-gray-700 p-4 rounded-lg">
-                    <h3 class="font-bold text-gray-600 dark:text-(--hs-white)">What types of goods do you transport?</h3>
-                    <p class="text-gray-500 dark:text-gray-400">We transport all types of goods, including cars, trucks, SUVs, motorcycles, and boats.</p>
+                    <h3 class="font-bold text-gray-600 dark:text-(--hs-white)">What types of goods do you transport?
+                    </h3>
+                    <p class="text-gray-500 dark:text-gray-400">We transport all types of goods, including cars, trucks,
+                        SUVs, motorcycles, and boats.</p>
                 </div>
                 <div class="bg-(--hs-white) dark:bg-gray-700 p-4 rounded-lg">
-                    <h3 class="font-bold text-gray-600 dark:text-(--hs-white)">How long does it take to transport goods?</h3>
-                    <p class="text-gray-500 dark:text-gray-400">Most transports take 2-5 business days, depending on the distance.</p>
+                    <h3 class="font-bold text-gray-600 dark:text-(--hs-white)">How long does it take to transport goods?
+                    </h3>
+                    <p class="text-gray-500 dark:text-gray-400">Most transports take 2-5 business days, depending on the
+                        distance.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 border-t border-gray-800 dark:border-gray-700 text-gray-400 py-10 transition-colors duration-300">
+    <footer
+        class="bg-gray-900 border-t border-gray-800 dark:border-gray-700 text-gray-400 py-10 transition-colors duration-300">
         <div class="container mx-auto px-6 text-center">
 
             <div class="flex justify-center items-center space-x-2">
-                <img class="w-16 h-16 md:w-20 md:h-20" src="../file-copy.svg" alt="logo"/>
-                <h2 class="text-lg md:text-2xl font-bold text-(--hs-white) uppercase tracking-wider">Hot Shooters LLC</h2>
+                <img class="w-16 h-16 md:w-20 md:h-20" src="../images/file-copy.svg" alt="logo" />
+                <h2 class="text-lg md:text-2xl font-bold text-(--hs-white) uppercase tracking-wider">Hot Shooters LLC
+                </h2>
             </div>
             <div class="flex justify-center space-x-6 mb-8">
                 <a href="#" class="hover:text-(--secondary-orange) transition"><i class="fab fa-facebook fa-lg"></i></a>
-                <a href="#" class="hover:text-(--secondary-orange) transition"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="#" class="hover:text-(--secondary-orange) transition"><i
+                        class="fab fa-instagram fa-lg"></i></a>
                 <a href="#" class="hover:text-(--secondary-orange) transition"><i class="fab fa-linkedin fa-lg"></i></a>
             </div>
             <p>&copy; 2026 Hot Shooters LLC. All rights reserved.</p>
@@ -331,4 +467,5 @@
 
     <script src="../scripts.js"></script>
 </body>
+
 </html>

@@ -82,6 +82,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Mobile Menu Toggle
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('max-h-0');
+        menu.classList.toggle('opacity-0');
+        menu.classList.toggle('max-h-96');
+        menu.classList.toggle('opacity-100');
+    });
+
 // Form Handling
 function handleSubmit(event) {
     event.preventDefault();
