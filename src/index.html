@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Hot Shooters LLC — reliable trucking, delivery, and logistics services. Professional drivers, 24/7 dispatch, and real-time tracking.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Hot Shooters LLC — reliable trucking, delivery, and logistics services. Professional drivers, 24/7 dispatch, and real-time tracking.">
     <title>Hot Shooters LLC - Professional Trucking & Delivery</title>
     <link rel="canonical" href="https://www.hot-shooters.com/" />
-    <link href="/styles/output.css" rel="stylesheet">
+    <link href="output.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="icon" href="../images/file-ico-2.ico" type="image/x-icon">
 
@@ -192,7 +194,7 @@
                     class="service-card bg-gray-50 dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700">
                     <div
                         class="w-14 h-14 accent-bg text-white rounded-lg flex items-center justify-center text-2xl mb-6">
-                        <i class="fas fa-route"></i>
+                        <i class="fas fa-hand-holding"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3 text-gray-600 dark:text-gray-100">White Glove Services</h3>
                     <p class="text-gray-600 dark:text-gray-400 mb-4"><span
@@ -415,8 +417,9 @@
         </div>
     </section>
     <!-- FAQs -->
-    <section id="faqs" class="py-10 md:py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
-        <div class="container mx-auto px-6">
+    <section id="faqs" class="py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
+        <div class="container mx-auto px-4 md:px-6 max-w-4xl">
+
             <div class="text-center mb-16">
                 <span class="text-(--secondary-orange) font-bold uppercase tracking-widest text-sm">Here are some common
                     questions about our services</span>
@@ -424,24 +427,121 @@
                     Questions</h2>
                 <div class="w-20 h-1 accent-bg mx-auto mt-4 rounded"></div>
             </div>
-            <div class="container mx-auto md:w-1/2 space-y-4">
-                <div class="bg-(--hs-white) dark:bg-gray-700 p-4 rounded-lg">
-                    <h3 class="font-bold text-gray-600 dark:text-(--hs-white)">What areas do you serve?</h3>
-                    <p class="text-gray-500 dark:text-gray-400">We serve the entire state of California, with a focus on
-                        the Los Angeles, Orange, and San Diego counties.</p>
+            <!-- dropdown faqs -->
+            <div class="space-y-4">
+
+                <div class="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+                    <button
+                        class="faq-btn w-full flex justify-between items-center p-5 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-750 transition-colors text-left focus:outline-none">
+                        <span class="font-bold text-gray-700 dark:text-gray-200 text-lg flex items-center gap-3">
+                            <i class="fas fa-truck-fast text-[--secondary-orange]"></i>
+                            What is "Hot Shot" trucking?
+                        </span>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div
+                        class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white dark:bg-gray-800">
+                        <div class="p-5 text-gray-600 dark:text-gray-400 border-t dark:border-gray-700">
+                            It is a specialized service designed for time-sensitive, smaller loads (LTL) that need
+                            expedited delivery. Unlike standard freight, our Hot Shot service is <strong>direct
+                                point-to-point</strong>, meaning your cargo is the only priority on the trailer—no
+                            transfers, no delays.
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-(--hs-white) dark:bg-gray-700 p-4 rounded-lg">
-                    <h3 class="font-bold text-gray-600 dark:text-(--hs-white)">What types of goods do you transport?
-                    </h3>
-                    <p class="text-gray-500 dark:text-gray-400">We transport all types of goods, including cars, trucks,
-                        SUVs, motorcycles, and boats.</p>
+
+                <div class="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+                    <button
+                        class="faq-btn w-full flex justify-between items-center p-5 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-750 transition-colors text-left focus:outline-none">
+                        <span class="font-bold text-gray-700 dark:text-gray-200 text-lg flex items-center gap-3">
+                            <i class="fas fa-map-marked-alt text-[--secondary-orange]"></i>
+                            What areas do you cover?(option 1)
+                        </span>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div
+                        class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white dark:bg-gray-800">
+                        <div class="p-5 text-gray-600 dark:text-gray-400 border-t dark:border-gray-700">
+                            Hot Shooters LLC <strong>serve in the entire state of California</strong>, with a
+                            focus on
+                            the Los Angeles, Orange, and San Diego counties.
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-(--hs-white) dark:bg-gray-700 p-4 rounded-lg">
-                    <h3 class="font-bold text-gray-600 dark:text-(--hs-white)">How long does it take to transport goods?
-                    </h3>
-                    <p class="text-gray-500 dark:text-gray-400">Most transports take 2-5 business days, depending on the
-                        distance.</p>
+
+                <div class="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+                    <button
+                        class="faq-btn w-full flex justify-between items-center p-5 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-750 transition-colors text-left focus:outline-none">
+                        <span class="font-bold text-gray-700 dark:text-gray-200 text-lg flex items-center gap-3">
+                            <i class="fas fa-map-marked-alt text-[--secondary-orange]"></i>
+                            What areas do you cover?(option 2)
+                        </span>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div
+                        class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white dark:bg-gray-800">
+                        <div class="p-5 text-gray-600 dark:text-gray-400 border-t dark:border-gray-700">
+                            Hot Shooters LLC operates <strong>nationwide</strong> across the contiguous United States
+                            (Lower 48). Whether you need a local delivery or a cross-country haul, our logistics network
+                            is ready to move.
+                        </div>
+                    </div>
                 </div>
+
+                <div class="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+                    <button
+                        class="faq-btn w-full flex justify-between items-center p-5 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-750 transition-colors text-left focus:outline-none">
+                        <span class="font-bold text-gray-700 dark:text-gray-200 text-lg flex items-center gap-3">
+                            <i class="fas fa-stopwatch text-[--secondary-orange]"></i>
+                            How fast can you dispatch?
+                        </span>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div
+                        class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white dark:bg-gray-800">
+                        <div class="p-5 text-gray-600 dark:text-gray-400 border-t dark:border-gray-700">
+                            Speed is our business. For most inquiries, we can have a driver dispatched and en route to
+                            the pickup location within <strong>1 to 2 hours</strong> of booking confirmation.
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+                    <button
+                        class="faq-btn w-full flex justify-between items-center p-5 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-750 transition-colors text-left focus:outline-none">
+                        <span class="font-bold text-gray-700 dark:text-gray-200 text-lg flex items-center gap-3">
+                            <i class="fas fa-boxes text-[--secondary-orange]"></i>
+                            What types of goods do you transport?
+                        </span>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div
+                        class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white dark:bg-gray-800">
+                        <div class="p-5 text-gray-600 dark:text-gray-400 border-t dark:border-gray-700">
+                            We transport all types of goods, including <strong>cars, trucks, SUVs, motorcycles, and
+                                boats.</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+                    <button
+                        class="faq-btn w-full flex justify-between items-center p-5 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-750 transition-colors text-left focus:outline-none">
+                        <span class="font-bold text-gray-700 dark:text-gray-200 text-lg flex items-center gap-3">
+                            <i class="fas fa-shield-alt text-[--secondary-orange]"></i>
+                            Is my cargo insured?
+                        </span>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div
+                        class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white dark:bg-gray-800">
+                        <div class="p-5 text-gray-600 dark:text-gray-400 border-t dark:border-gray-700">
+                            Absolutely. We carry comprehensive <strong>Cargo and Liability Insurance</strong>. Your
+                            freight is fully protected from the moment we pick it up until the moment it's safely
+                            delivered. Certificates available upon request.
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>

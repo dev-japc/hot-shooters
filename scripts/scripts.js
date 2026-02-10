@@ -62,6 +62,31 @@ document.addEventListener('DOMContentLoaded', () => {
         menu.classList.toggle('opacity-100');
     });
 
+// --- Dropdown faqs ---
+document.querySelectorAll('.faq-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('.fa-chevron-down');
+
+        // 1. Alternar la altura (Smooth Animation)
+        if (content.style.maxHeight) {
+            // Si está abierto, ciérralo (null quita el estilo inline)
+            content.style.maxHeight = null;
+            icon.classList.remove('rotate-180');
+            button.classList.remove('text-[--secondary-orange]'); // Quitar color activo (opcional)
+        } else {
+            // Si está cerrado, ábrelo calculando la altura exacta del texto
+            // Opcional: Cerrar otros acordeones abiertos (comenta esto si quieres permitir múltiples abiertos)
+            document.querySelectorAll('.faq-content').forEach(el => el.style.maxHeight = null);
+            document.querySelectorAll('.fa-chevron-down').forEach(el => el.classList.remove('rotate-180'));
+            
+            content.style.maxHeight = content.scrollHeight + "px";
+            icon.classList.add('rotate-180');
+            button.classList.add('text-[--secondary-orange]'); // Color activo
+        }
+    });
+});
+
 // Form Handling
 function handleSubmit(event) {
     event.preventDefault();
