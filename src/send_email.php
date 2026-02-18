@@ -18,7 +18,7 @@ loadEnv(__DIR__ . '/.env');
 header('Content-Type: application/json');
 
 // Recipient email — loaded from .env or fallback
-$recipient_email = isset($_ENV['RECIPIENT_EMAIL']) ? $_ENV['RECIPIENT_EMAIL'] : 'info@hot-shooters.com';
+$recipient_email = isset($_ENV['RECIPIENT_EMAIL']) ? $_ENV['RECIPIENT_EMAIL'] : 'devjapc@gmail.com';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
