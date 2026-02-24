@@ -95,7 +95,7 @@ document.querySelectorAll(".faq-btn").forEach((button) => {
       // Si está abierto, ciérralo (null quita el estilo inline)
       content.style.maxHeight = null;
       icon.classList.remove("rotate-180");
-      button.classList.remove("text-[--secondary-orange]"); // Quitar color activo (opcional)
+      button.classList.remove("text-(--secondary-orange)");
     } else {
       // Si está cerrado, ábrelo calculando la altura exacta del texto
       // Opcional: Cerrar otros acordeones abiertos (comenta esto si quieres permitir múltiples abiertos)
@@ -108,7 +108,7 @@ document.querySelectorAll(".faq-btn").forEach((button) => {
 
       content.style.maxHeight = content.scrollHeight + "px";
       icon.classList.add("rotate-180");
-      button.classList.add("text-[--secondary-orange]"); // Color activo
+      button.classList.add("text-(--secondary-orange)");
     }
   });
 });
@@ -192,7 +192,7 @@ function handleSubmit(event) {
   // Collect form data
   const formData = new FormData(form);
 
-  fetch("send_email.php", {
+  fetch("./send_email.php", {
     method: "POST",
     body: formData,
   })

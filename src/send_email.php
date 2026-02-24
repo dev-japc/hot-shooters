@@ -1,4 +1,5 @@
 <?php
+ob_start(); // Inicia el búfer para capturar warnings inesperados
 // Simple .env loader (no external libraries required)
 function loadEnv($path) {
     if (!file_exists($path)) {
@@ -49,13 +50,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $headers .= "X-Mailer: PHP/" . phpversion();
 
     // 5. Send
-    if (mail($recipient_email, $subject, $email_content, $headers)) {
-        echo json_encode(["status" => "success", "message" => "Message sent successfully."]);
-    } else {
-        http_response_code(500);
-        echo json_encode(["status" => "server_error", "message" => "Failed to send message. Please try again later."]);
-    }
+    // 5. Send with Debugging
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
 
+    try {
+        if (mail($recipient_email, $subject, $email_content, $headers)) {
+            echo json_encode(["status" => "success", "message" => "Message sent successfully to $recipient_email."]);
+        } else {
+            // Intentar capturar el último error de PHP
+            $last_error = error_get_last();
+            echo json_encode([
+                "status" => "server_error", 
+                "message" => "PHP mail() returned false.",
+                "debug" => $last_error ? $last_error['message'] : "No specific PHP error recorded."
+            ]);
+        }
+    } catch (Exception $e) {
+        echo json_encode(["status" => "error", "message" => $e->getMessage()]);
+    }
+ob_clean(); // Borra cualquier warning capturado en el búfer
+header('Content-Type: application/json');
+echo json_encode(["status" => "success", "message" => "Message sent successfully."]);
+exit;
 } else {
     http_response_code(405);
     echo json_encode(["status" => "error", "message" => "Method not allowed."]);

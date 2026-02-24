@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Shooters - Coming Soon</title>
+    <!-- Tailwind CSS for layout utility -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        @import url('style.css');
+    </style>
+</head>
+<body class="flex flex-col min-h-screen relative">
+
+    <!-- Background Particles Container -->
+    <div class="particles" id="particles-js"></div>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center relative z-10 px-4">
+        <div class="glass-panel max-w-2xl w-full p-10 md:p-14 rounded-xl text-center">
+            
+            <!-- Logo Area -->
+            <div class="mb-10 flex justify-center">
+                <div class="logo-container shadow-2xl">
+                    <!-- 
+                        NOTE: This img tag expects the file "Adobe Express - file.jpg" 
+                        to be in the same folder as this HTML file.
+                    -->
+                    <img src="./file.svg" 
+                         alt="Hot Shooters Logo" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/200x200/0f172a/c81d25?text=HS';">
+                </div>
+            </div>
+
+            <!-- Title -->
+            <h1 class="text-4xl md:text-5xl mb-4 brand-text uppercase tracking-wide">
+                Hot Shooters
+            </h1>
+            
+            <div class="h-1 w-24 bg-red-800 mx-auto mb-8 rounded-full opacity-50"></div>
+
+            <!-- Status Message -->
+            <h2 class="text-xl md:text-2xl font-semibold text-white mb-4">
+                Website Coming Soon
+            </h2>
+            <p class="text-gray-400 mb-10 leading-relaxed font-light">
+                We are currently establishing our online presence to serve you better. 
+                Our team is working diligently to prepare a new streamlined experience.
+            </p>
+
+            <!-- Notify Form -->
+            <div class="flex flex-col sm:flex-row gap-0 max-w-md mx-auto border border-gray-700 rounded-lg overflow-hidden">
+                <input type="email" placeholder="Email Address" class="flex-grow bg-slate-900/50 text-white border-none px-6 py-4 focus:ring-0 input-formal placeholder-gray-500 font-light">
+                <button class="btn-formal text-white font-semibold py-4 px-8 uppercase text-sm">
+                    Subscribe
+                </button>
+            </div>
+            <p class="mt-4 text-xs text-gray-500">
+                Join our newsletter to receive updates upon launch.
+            </p>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 py-8 text-center text-gray-600 text-xs uppercase tracking-widest">
+        <p>&copy; 2026 Hot Shooters. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script src="scripts.js"></script>
+</body>
+</html>
