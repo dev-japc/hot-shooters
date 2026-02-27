@@ -92,9 +92,9 @@ function renderNavbar(options = {}) {
   container.innerHTML = `
     <nav class="bg-white dark:bg-gray-800 shadow-md fixed w-full z-50 transition-colors duration-300">
       <div class="container mx-auto pr-4 md:px-6 flex justify-between items-center">
-        <a href="${homeHref}" class="tex-sm md:text-xl font-bold uppercase tracking-wider flex items-center gap-2">
+        <a href="${homeHref}" class="flex items-center gap-2">
           <img class="w-16 h-16 md:w-20 md:h-20" src="../images/file-copy.svg" alt="logo" />
-          <span class="text-gray-600 dark:text-gray-200 hover:text-(--secondary-orange)">Hot Shooters <span
+          <span class="text-gray-600 text-sm xl:text-xl font-bold uppercase tracking-wider dark:text-gray-200 hover:text-(--secondary-orange)">Hot Shooters <span
               class="accent-text">LLC</span></span>
         </a>
 

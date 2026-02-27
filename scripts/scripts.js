@@ -53,6 +53,40 @@ document.addEventListener("DOMContentLoaded", () => {
       setTheme(isDark ? "light" : "dark");
     });
   });
+
+  // Mobile menu toggle (for static HTML pages that don't use navbar.js)
+  if (typeof initMobileMenu === "undefined") {
+    const mobileBtn = document.getElementById("mobile-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        mobileMenu.classList.toggle("max-h-0");
+        mobileMenu.classList.toggle("opacity-0");
+        mobileMenu.classList.toggle("max-h-96");
+        mobileMenu.classList.toggle("opacity-100");
+      });
+
+      document.addEventListener("click", (e) => {
+        const isOpen = mobileMenu.classList.contains("max-h-96");
+        if (
+          isOpen &&
+          !mobileMenu.contains(e.target) &&
+          !mobileBtn.contains(e.target)
+        ) {
+          mobileMenu.classList.add("max-h-0", "opacity-0");
+          mobileMenu.classList.remove("max-h-96", "opacity-100");
+        }
+      });
+
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("max-h-0", "opacity-0");
+          mobileMenu.classList.remove("max-h-96", "opacity-100");
+        });
+      });
+    }
+  }
 });
 
 // --- Dropdown faqs ---

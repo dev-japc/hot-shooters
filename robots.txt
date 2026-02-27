@@ -1,4 +1,4 @@
-Sitemap: https://hot-shooters.com/sitemap.xml
+Sitemap: https://www.hot-shooters.com/sitemap.xml
 
 User-agent: *
 Disallow:
