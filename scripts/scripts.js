@@ -55,35 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Mobile Menu Toggle
-const btn = document.getElementById("mobile-menu-btn");
-const menu = document.getElementById("mobile-menu");
-
-btn.addEventListener("click", (e) => {
-  e.stopPropagation();
-  menu.classList.toggle("max-h-0");
-  menu.classList.toggle("opacity-0");
-  menu.classList.toggle("max-h-96");
-  menu.classList.toggle("opacity-100");
-});
-
-// Close mobile menu when clicking outside
-document.addEventListener("click", (e) => {
-  const isOpen = menu.classList.contains("max-h-96");
-  if (isOpen && !menu.contains(e.target) && !btn.contains(e.target)) {
-    menu.classList.add("max-h-0", "opacity-0");
-    menu.classList.remove("max-h-96", "opacity-100");
-  }
-});
-
-// Close mobile menu when clicking a menu option
-menu.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    menu.classList.add("max-h-0", "opacity-0");
-    menu.classList.remove("max-h-96", "opacity-100");
-  });
-});
-
 // --- Dropdown faqs ---
 document.querySelectorAll(".faq-btn").forEach((button) => {
   button.addEventListener("click", () => {
