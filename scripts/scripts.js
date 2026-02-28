@@ -126,7 +126,7 @@ function showToast(type, message) {
       border: "border-green-400 dark:border-green-600",
       text: "text-green-800 dark:text-green-200",
       iconColor: "text-green-500 dark:text-green-400",
-      title: "Success",
+      title: "toast-success-title",
     },
     error: {
       icon: "fa-exclamation-circle",
@@ -134,7 +134,7 @@ function showToast(type, message) {
       border: "border-red-400 dark:border-red-600",
       text: "text-red-800 dark:text-red-200",
       iconColor: "text-red-500 dark:text-red-400",
-      title: "Error",
+      title: "toast-error-title",
     },
     server_error: {
       icon: "fa-exclamation-triangle",
@@ -142,20 +142,28 @@ function showToast(type, message) {
       border: "border-amber-400 dark:border-amber-600",
       text: "text-amber-800 dark:text-amber-200",
       iconColor: "text-amber-500 dark:text-amber-400",
-      title: "Server Error",
+      title: "toast-server-error-title",
     },
   };
 
   const c = config[type];
   if (!c) return;
 
+  const currentLang = localStorage.getItem("language") || "en";
+  const title =
+    (translations[currentLang] && translations[currentLang][c.title]) ||
+    c.title;
+  const translatedMessage =
+    (translations[currentLang] && translations[currentLang][message]) ||
+    message;
+
   const toast = document.createElement("div");
   toast.className = `fixed top-24 right-4 z-[100] max-w-sm w-full ${c.bg} ${c.text} border-l-4 ${c.border} rounded-lg shadow-xl backdrop-blur-sm p-4 flex items-start gap-3 transform translate-x-[120%] transition-transform duration-500 ease-out`;
   toast.innerHTML = `
         <i class="fas ${c.icon} ${c.iconColor} text-xl mt-0.5 shrink-0"></i>
         <div class="flex-1 min-w-0">
-            <p class="font-bold text-sm">${c.title}</p>
-            <p class="text-sm opacity-90 mt-0.5">${message}</p>
+            <p class="font-bold text-sm">${title}</p>
+            <p class="text-sm opacity-90 mt-0.5">${translatedMessage}</p>
         </div>
         <button onclick="this.closest('div').remove()" class="shrink-0 opacity-60 hover:opacity-100 transition-opacity cursor-pointer">
             <i class="fas fa-times"></i>
@@ -189,8 +197,13 @@ function handleSubmit(event) {
   const submitBtn = form.querySelector('button[type="submit"]');
   const originalBtnHTML = submitBtn.innerHTML;
 
+  const currentLang = localStorage.getItem("language") || "en";
+  const sendingText =
+    (translations[currentLang] && translations[currentLang]["form-sending"]) ||
+    "Sending...";
+
   // Show loading state
-  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+  submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> ${sendingText}`;
   submitBtn.disabled = true;
   submitBtn.classList.add("opacity-75");
 
@@ -206,28 +219,16 @@ function handleSubmit(event) {
     )
     .then(({ ok, data }) => {
       if (ok && data.status === "success") {
-        showToast(
-          "success",
-          "Thank you! Your message has been sent successfully.",
-        );
+        showToast("success", "toast-msg-success");
         form.reset();
       } else if (data.status === "error") {
-        showToast(
-          "error",
-          data.message || "Please fill in all fields correctly.",
-        );
+        showToast("error", data.message || "toast-msg-error");
       } else {
-        showToast(
-          "server_error",
-          data.message || "Sorry, there was a problem sending your message.",
-        );
+        showToast("server_error", data.message || "toast-msg-server-error");
       }
     })
     .catch(() => {
-      showToast(
-        "server_error",
-        "Network error. Please check your connection and try again.",
-      );
+      showToast("server_error", "toast-msg-network-error");
     })
     .finally(() => {
       // Restore button

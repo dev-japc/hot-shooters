@@ -26,6 +26,8 @@
     <link href="../styles/styles.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="icon" href="../images/file-ico-2.ico" type="image/x-icon">
+    <script src="../scripts/i18n-translations.js"></script>
+    <script src="../scripts/i18n.js"></script>
 </head>
 
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
@@ -44,6 +46,12 @@
 
             <!-- Mobile Menu and Theme Toggle -->
             <div class="md:hidden flex items-center gap-4">
+                <div class="flex items-center">
+                    <button onclick="toggleLanguage()"
+                        class="lang-btn-en px-2 py-1 text-xs font-medium text-gray-600 dark:text-gray-200 transition-colors duration-200">EN</button>
+                    <button onclick="toggleLanguage()"
+                        class="lang-btn-es px-2 py-1 text-xs font-medium text-gray-600 dark:text-gray-200 transition-colors duration-200">ES</button>
+                </div>
                 <button id="theme-toggle"
                     class="theme-toggle-btn rounded-full hover:scale-110 transition focus:outline-none"
                     aria-label="Toggle Dark Mode">
@@ -54,23 +62,29 @@
                 </a>
             </div>
 
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex xl:space-x-8 space-x-4 font-semibold">
+             <!-- Desktop Menu -->
+            <div class="hidden md:flex xl:space-x-8 space-x-4 font-semibold items-center">
                 <a href="/#home"
-                    class="py-2 text-gray-600 dark:text-gray-200 hover:text-(--secondary-orange) transition">Home</a>
+                    class="py-2 text-gray-600 dark:text-gray-200 hover:text-(--secondary-orange) transition" data-i18n="nav-home">Home</a>
                 <a href="/#services"
-                    class="py-2 text-gray-600 dark:text-gray-200 hover:text-(--secondary-orange) transition">Services</a>
+                    class="py-2 text-gray-600 dark:text-gray-200 hover:text-(--secondary-orange) transition" data-i18n="nav-services">Services</a>
                 <a href="/#about"
-                    class="py-2 text-gray-600 dark:text-gray-200 hover:text-(--secondary-orange) transition">Why Us</a>
+                    class="py-2 text-gray-600 dark:text-gray-200 hover:text-(--secondary-orange) transition" data-i18n="nav-why-us">Why Us</a>
                 <a href="/#faqs"
-                    class="py-2 text-gray-600 dark:text-gray-200 hover:text-(--secondary-orange) transition">FAQs</a>
+                    class="py-2 text-gray-600 dark:text-gray-200 hover:text-(--secondary-orange) transition" data-i18n="nav-faqs">FAQs</a>
+                <div class="flex items-center border border-(--secondary-orange) p-2 rounded-lg">
+                    <button onclick="toggleLanguage()"
+                        class="lang-btn-en text-sm cursor-pointer text-gray-600 font-bold dark:text-gray-200 transition-colors duration-200">EN</button>
+                    <button onclick="toggleLanguage()"
+                        class="lang-btn-es text-sm cursor-pointer text-gray-600 font-bold dark:text-gray-200 transition-colors duration-200">ES</button>
+                </div>
                 <button id="theme-toggle"
                     class="theme-toggle-btn rounded-full hover:scale-110 transition focus:outline-none"
                     aria-label="Toggle Dark Mode">
                     <i class="fas fa-moon text-gray-600 dark:text-gray-300"></i>
                 </button>
                 <button onclick="window.location.href='/#contact'"
-                    class="px-5 py-2 bg-(--secondary-orange) hover:bg-orange-500 text-(--hs-white) rounded transition cursor-pointer">
+                    class="px-5 py-2 bg-(--secondary-orange) hover:bg-orange-500 text-(--hs-white) rounded transition cursor-pointer" data-i18n="nav-contact">
                     Contact
                 </button>
             </div>
@@ -83,10 +97,10 @@
         <div class="container mx-auto px-6 max-w-4xl">
 
             <div class="text-center mb-12">
-                <span class="text-(--secondary-orange) font-bold uppercase tracking-widest text-sm">Legal</span>
-                <h1 class="text-3xl md:text-4xl font-bold mt-2 text-gray-600 dark:text-gray-100">Terms of Use</h1>
+                <span class="text-(--secondary-orange) font-bold uppercase tracking-widest text-sm" data-i18n="nav-legal">Legal</span>
+                <h1 class="text-3xl md:text-4xl font-bold mt-2 text-gray-600 dark:text-gray-100" data-i18n="terms-title">Terms of Use</h1>
                 <div class="w-20 h-1 accent-bg mx-auto mt-4 rounded"></div>
-                <p class="text-gray-500 dark:text-gray-400 mt-4 text-sm">Last Updated: February 10, 2026</p>
+                <p class="text-gray-500 dark:text-gray-400 mt-4 text-sm" data-i18n="terms-last-updated">Last Updated: February 10, 2026</p>
             </div>
 
             <div class="space-y-8 text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -95,9 +109,9 @@
                 <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700">
                     <h2 class="text-xl font-bold mb-3 text-gray-700 dark:text-gray-100 flex items-center gap-3">
                         <i class="fas fa-file-contract text-(--secondary-orange)"></i>
-                        1. Acceptance of Terms
+                        <span data-i18n="terms-accept-title">1. Acceptance of Terms</span>
                     </h2>
-                    <p>
+                    <p data-i18n="terms-accept-text">
                         By accessing and using the Hot Shooters LLC website and services, you accept and agree to be
                         bound by these Terms of Use. If you do not agree with any part of these terms, you must not use
                         our website or services.
@@ -108,9 +122,9 @@
                 <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700">
                     <h2 class="text-xl font-bold mb-3 text-gray-700 dark:text-gray-100 flex items-center gap-3">
                         <i class="fas fa-truck-moving text-(--secondary-orange)"></i>
-                        2. Services Description
+                        <span data-i18n="terms-desc-title">2. Services Description</span>
                     </h2>
-                    <p>
+                    <p data-i18n="terms-desc-text">
                         Hot Shooters LLC provides trucking, delivery, and logistics services including but not limited
                         to Ground Services, LTL Ground Transit, and White Glove Services. All services are subject to
                         availability and the terms of individual service agreements.
@@ -121,26 +135,26 @@
                 <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700">
                     <h2 class="text-xl font-bold mb-3 text-gray-700 dark:text-gray-100 flex items-center gap-3">
                         <i class="fas fa-user-check text-(--secondary-orange)"></i>
-                        3. User Responsibilities
+                        <span data-i18n="terms-user-title">3. User Responsibilities</span>
                     </h2>
-                    <p class="mb-3">When using our services, you agree to:</p>
+                    <p class="mb-3" data-i18n="terms-user-text">When using our services, you agree to:</p>
                     <ul class="space-y-2 text-sm">
                         <li class="flex items-start gap-2">
                             <i class="fas fa-check-circle text-(--secondary-orange) mt-1"></i>
-                            <span>Provide accurate and complete information when requesting quotes or services.</span>
+                            <span data-i18n="terms-user-item-1">Provide accurate and complete information when requesting quotes or services.</span>
                         </li>
                         <li class="flex items-start gap-2">
                             <i class="fas fa-check-circle text-(--secondary-orange) mt-1"></i>
-                            <span>Comply with all applicable laws and regulations related to the shipment of
+                            <span data-i18n="terms-user-item-2">Comply with all applicable laws and regulations related to the shipment of
                                 goods.</span>
                         </li>
                         <li class="flex items-start gap-2">
                             <i class="fas fa-check-circle text-(--secondary-orange) mt-1"></i>
-                            <span>Ensure that all cargo is properly described, packaged, and labeled.</span>
+                            <span data-i18n="terms-user-item-3">Ensure that all cargo is properly described, packaged, and labeled.</span>
                         </li>
                         <li class="flex items-start gap-2">
                             <i class="fas fa-check-circle text-(--secondary-orange) mt-1"></i>
-                            <span>Not ship any prohibited, hazardous, or illegal materials without proper
+                            <span data-i18n="terms-user-item-4">Not ship any prohibited, hazardous, or illegal materials without proper
                                 authorization.</span>
                         </li>
                     </ul>
@@ -150,9 +164,9 @@
                 <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700">
                     <h2 class="text-xl font-bold mb-3 text-gray-700 dark:text-gray-100 flex items-center gap-3">
                         <i class="fas fa-dollar-sign text-(--secondary-orange)"></i>
-                        4. Pricing & Payment
+                        <span data-i18n="terms-pricing-title">4. Pricing & Payment</span>
                     </h2>
-                    <p>
+                    <p data-i18n="terms-pricing-text">
                         All quotes provided are estimates and may be subject to change based on actual shipment
                         details, distance, weight, and other factors. Final pricing will be confirmed prior to service
                         commencement. Payment terms are outlined in individual service agreements and must be fulfilled
@@ -164,25 +178,25 @@
                 <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700">
                     <h2 class="text-xl font-bold mb-3 text-gray-700 dark:text-gray-100 flex items-center gap-3">
                         <i class="fas fa-shield-alt text-(--secondary-orange)"></i>
-                        5. Liability & Insurance
+                        <span data-i18n="terms-liability-title">5. Liability & Insurance</span>
                     </h2>
-                    <p class="mb-3">
+                    <p class="mb-3" data-i18n="terms-liability-text">
                         Hot Shooters LLC carries comprehensive Cargo and Liability Insurance. However, our liability
                         is limited as follows:
                     </p>
                     <ul class="space-y-2 text-sm">
                         <li class="flex items-start gap-2">
                             <i class="fas fa-check-circle text-(--secondary-orange) mt-1"></i>
-                            <span>We are not liable for delays caused by weather, traffic, road conditions, or other
+                            <span data-i18n="terms-liability-item-1">We are not liable for delays caused by weather, traffic, road conditions, or other
                                 circumstances beyond our control.</span>
                         </li>
                         <li class="flex items-start gap-2">
                             <i class="fas fa-check-circle text-(--secondary-orange) mt-1"></i>
-                            <span>Claims for damaged or lost cargo must be reported within 48 hours of delivery.</span>
+                            <span data-i18n="terms-liability-item-2">Claims for damaged or lost cargo must be reported within 48 hours of delivery.</span>
                         </li>
                         <li class="flex items-start gap-2">
                             <i class="fas fa-check-circle text-(--secondary-orange) mt-1"></i>
-                            <span>Liability for any single shipment shall not exceed the declared value of the
+                            <span data-i18n="terms-liability-item-3">Liability for any single shipment shall not exceed the declared value of the
                                 cargo.</span>
                         </li>
                     </ul>
@@ -192,9 +206,9 @@
                 <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700">
                     <h2 class="text-xl font-bold mb-3 text-gray-700 dark:text-gray-100 flex items-center gap-3">
                         <i class="fas fa-ban text-(--secondary-orange)"></i>
-                        6. Prohibited Items
+                        <span data-i18n="terms-prohibited-title">6. Prohibited Items</span>
                     </h2>
-                    <p>
+                    <p data-i18n="terms-prohibited-text">
                         Hot Shooters LLC reserves the right to refuse transport of any items deemed dangerous,
                         illegal, or otherwise unsuitable for transport. This includes, but is not limited to,
                         explosives, firearms (unless properly licensed), perishable goods without adequate
@@ -206,9 +220,9 @@
                 <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700">
                     <h2 class="text-xl font-bold mb-3 text-gray-700 dark:text-gray-100 flex items-center gap-3">
                         <i class="fas fa-globe text-(--secondary-orange)"></i>
-                        7. Website Use
+                        <span data-i18n="terms-website-title">7. Website Use</span>
                     </h2>
-                    <p>
+                    <p data-i18n="terms-website-text">
                         The content on this website is for informational purposes only. You may not reproduce,
                         distribute, or otherwise use any content from this website without the express written
                         permission of Hot Shooters LLC. We reserve the right to modify or discontinue any part of the
@@ -220,9 +234,9 @@
                 <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700">
                     <h2 class="text-xl font-bold mb-3 text-gray-700 dark:text-gray-100 flex items-center gap-3">
                         <i class="fas fa-gavel text-(--secondary-orange)"></i>
-                        8. Governing Law
+                        <span data-i18n="terms-governing-title">8. Governing Law</span>
                     </h2>
-                    <p>
+                    <p data-i18n="terms-governing-text">
                         These Terms of Use are governed by and construed in accordance with the laws of the State of
                         California. Any disputes arising under these terms shall be subject to the exclusive
                         jurisdiction of the courts located in Los Angeles County, California.
@@ -233,9 +247,9 @@
                 <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700">
                     <h2 class="text-xl font-bold mb-3 text-gray-700 dark:text-gray-100 flex items-center gap-3">
                         <i class="fas fa-pen text-(--secondary-orange)"></i>
-                        9. Changes to Terms
+                        <span data-i18n="terms-changes-title">9. Changes to Terms</span>
                     </h2>
-                    <p>
+                    <p data-i18n="terms-changes-text">
                         Hot Shooters LLC reserves the right to update or modify these Terms of Use at any time. Changes
                         will be effective immediately upon posting to this website. Your continued use of our website
                         and services following any changes constitutes acceptance of the revised terms.
@@ -246,9 +260,9 @@
                 <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700">
                     <h2 class="text-xl font-bold mb-3 text-gray-700 dark:text-gray-100 flex items-center gap-3">
                         <i class="fas fa-envelope text-(--secondary-orange)"></i>
-                        10. Contact Information
+                        <span data-i18n="terms-contact-title">10. Contact Information</span>
                     </h2>
-                    <p class="mb-3">
+                    <p class="mb-3" data-i18n="terms-contact-text">
                         If you have any questions about these Terms of Use, please contact us:
                     </p>
                     <div class="space-y-2 text-sm">
@@ -289,17 +303,17 @@
                         class="fab fa-youtube fa-lg"></i></a>
             </div>
             <p>&copy;
-                <script>document.write(new Date().getFullYear())</script> Hot Shooters LLC. All rights reserved.
+                <script>document.write(new Date().getFullYear())</script> Hot Shooters LLC. <span data-i18n="footer-all-rights">All rights reserved.</span>
             </p>
             <p class="mt-2 text-sm">
-                <a href="/terms" class="hover:text-(--secondary-orange) transition">Terms of Use</a>
+                <a href="/terms" class="hover:text-(--secondary-orange) transition" data-i18n="footer-terms">Terms of Use</a>
                 <span class="mx-2">|</span>
-                <a href="/privacy" class="hover:text-(--secondary-orange) transition">Privacy
+                <a href="/privacy" class="hover:text-(--secondary-orange) transition" data-i18n="footer-privacy">Privacy
                     Policy</a>
             </p>
             <div class="mt-6 pt-4">
                 <p class="text-sm text-gray-500">
-                    Developed by: <br><span class="text-gray-300 font-semibold">Jorge Palacios - Systems Engineer</span>
+                    <span data-i18n="footer-developed-by">Developed by:</span> <br><span class="text-gray-300 font-semibold">Jorge Palacios - Systems Engineer</span>
                 </p>
                 <div class="flex justify-center space-x-4 mt-2">
                     <a href="https://www.linkedin.com/in/jorgeapalaciosc/" target="_blank" rel="noopener noreferrer"
